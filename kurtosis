@@ -1,0 +1,11 @@
+def kurtosis(data):
+    n=len(data)
+    mean=sum(data)/n
+    numerator=sum([(x-mean)**4 for x in data])
+    deno1=(sum([(x-mean)**2 for x in data])/n)**2
+    deno2=deno1*n
+    kurto=numerator/deno2
+    return kurto
+data=[12, 32, 41, 11, 1, 2, 3, 4]
+kurto=kurtosis(data)
+print(kurto)
